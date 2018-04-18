@@ -1,0 +1,22 @@
+# -*- mode: org; -*-
+#+title: sigbuffer: buffer stderr/stdout between signals
+
+This tool is for folks who use dumb terminals along with tools like
+dtach/abduco. When you detach from the session, the idea is it would
+start buffering the output into memory until you reattached
+later. Currently this is only partially functional, as some tooling is
+necessary to get the USR1/USR2 detach/reattach session management
+working.
+
+* Build instructions
+
+Will be moving to [[https://gittup.org/tup][tup]] when there is more to build, but for now:
+
+gcc '-std=c11' ./sigbuffer.c
+
+And then run with ./a.out
+
+* Use instructions
+
+None yet, as the USR1/USR2 doesn't work yet.
+
